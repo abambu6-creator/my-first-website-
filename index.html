@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Home - BGDCF</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navigation Menu with Logo -->
+  <nav>
+    <div class="logo-container">
+      <img src="images/logo.png" alt="BGDCF Logo" class="logo">
+    </div>
+    <ul>
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <h1>Welcome to Bridging the Gap Development Consultancy Firm</h1>
+  <p>
+    We empower NGOs and community-based organizations with strategies, training, 
+    and tools to achieve sustainable success. Explore our services, learn more 
+    about our mission, and get in touch to partner with us.
+  </p>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>About Us</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navigation Menu -->
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html" class="active">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <h1>About Bridging the Gap Development Consultancy Firm</h1>
+  <p>
+    Bridging the Gap Development Consultancy Firm (BGDCF) is dedicated to 
+    empowering NGOs and community-based organizations with the tools, 
+    strategies, and training they need to achieve sustainable success.
+  </p>
+
+  <p>Our focus areas include:</p>
+  <ul>
+    <li>Capacity building and organizational development</li>
+    <li>Donor engagement and fundraising strategies</li>
+    <li>Community-driven development initiatives</li>
+    <li>Monitoring and evaluation support</li>
+  </ul>
+</body>
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Our Services</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navigation Menu -->
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html" class="active">Services</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <h1>Our Services</h1>
+  <p>
+    At BGDCF, we provide tailored solutions to help NGOs and community-based 
+    organizations thrive. Our services are designed to strengthen organizational 
+    capacity and ensure long-term impact.
+  </p>
+
+  <h2>What We Offer</h2>
+  <ul>
+    <li><strong>Capacity Building:</strong> Training programs and workshops to enhance skills and organizational effectiveness.</li>
+    <li><strong>Fundraising Strategies:</strong> Guidance on donor engagement, proposal writing, and resource mobilization.</li>
+    <li><strong>Community Development:</strong> Support for participatory, community-driven initiatives that foster local ownership.</li>
+    <li><strong>Monitoring & Evaluation:</strong> Tools and frameworks to track progress, measure impact, and improve accountability.</li>
+  </ul>
+
+  <p>
+    Whether you are a grassroots organization or an established NGO, BGDCF is 
+    committed to walking alongside you to achieve sustainable success.
+  </p>
+</body>
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Contact Us</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navigation Menu -->
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+    </ul>
+  </nav>
+
+  <h1>Contact Us</h1>
+  <p>We’d love to hear from you! Reach out using the form below or via our direct contact details.</p>
+
+  <!-- Contact Form -->
+  <form id="contact-form" action="https://formspree.io/f/abcd1234" method="POST">
+    <label for="name">Your Name:</label><br>
+    <input type="text" id="name" name="name" required><br><br>
+
+    <label for="email">Your Email:</label><br>
+    <input type="email" id="email" name="_replyto" required><br><br>
+
+    <label for="message">Your Message:</label><br>
+    <textarea id="message" name="message" rows="5" required></textarea><br><br>
+
+    <button type="submit">Send Message</button>
+  </form>
+
+  <!-- Direct Contact Info -->
+  <h2>Our Office</h2>
+  <p>
+    Yambio, WES, SSD <br>
+    Email: issabgdcf@gmail.com <br>
+    Phone (South Sudan): +211 928 167 846 <br>
+    Phone (Uganda): +256 786 436 004
+  </p>
+
+  <div id="form-status"></div>
+
+  <script>
+    const form = document.getElementById('contact-form');
+    const status = document.getElementById('form-status');
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const data = new FormData(form);
+      try {
+        const response = await fetch(form.action, {
+          method: form.method,
+          body: data,
+          headers: { 'Accept': 'application/json' }
+        });
+        if (response.ok) {
+          status.innerHTML = "✅ Message sent successfully!";
+          form.reset();
+        } else {
+          status.innerHTML = "❌ Oops! Something went wrong. Please try again.";
+        }
+      } catch (error) {
+        status.innerHTML = "❌ Network error. Please check your connection.";
+      }
+    });
+  </script>
+</body>
+</html>
+<img src="images/logo.png" alt="BGDCF Logo" class="logo">
+<nav>
+  <div class="logo-container">
+    <img src="images/logo.png" alt="BGDCF Logo" class="logo">
+  </div>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="contact.html" class="active">Contact</a></li>
+  </ul>
+</nav>
+
